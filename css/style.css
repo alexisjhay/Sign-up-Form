@@ -206,6 +206,10 @@ input:user-invalid {
 	padding: 1rem;
 	margin-bottom: 1rem;
 }
+.form-option span {
+	font-weight: bold;
+	color: #596d48;
+}
 
 @media only screen and (max-width: 900px) {
 	.container .image-panel {
