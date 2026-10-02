@@ -3,8 +3,8 @@
 @font-face {
 	font-family: "Norse";
 	src:
-		url("/Fonts/Norse.woff2") format("woff2"),
-		url("/Fonts/Norse.woff") format("woff");
+		url("../Fonts/Norse.woff2") format("woff2"),
+		url("../Fonts/Norse.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -13,8 +13,8 @@
 @font-face {
 	font-family: "Norse";
 	src:
-		url("/Fonts/Norse-Bold.woff2") format("woff2"),
-		url("/Fonts/Norse-Bold.woff") format("woff");
+		url("../Fonts/Norse-Bold.woff2") format("woff2"),
+		url("../Fonts/Norse-Bold.woff") format("woff");
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -43,7 +43,7 @@ img {
 
 .container .image-panel {
 	flex: 1 1 300px;
-	background: url("/images/bg.jpg") center / cover no-repeat;
+	background: url("../images/bg.jpg") center / cover no-repeat;
 	min-height: 100vh;
 	position: relative;
 }
