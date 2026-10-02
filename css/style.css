@@ -206,3 +206,22 @@ input:user-invalid {
 	padding: 1rem;
 	margin-bottom: 1rem;
 }
+
+@media only screen and (max-width: 900px) {
+	.container .image-panel {
+		min-height: 30vh;
+	}
+
+	.image-panel .logo {
+		height: 100%;
+		top: 0;
+	}
+
+	.image-panel .footer {
+		text-align: right;
+	}
+
+	.form .form-intro {
+		justify-content: center;
+	}
+}
