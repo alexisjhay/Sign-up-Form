@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 @font-face {
 	font-family: "Norse";
 	src:
@@ -25,13 +27,13 @@
 }
 
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 img {
 	display: block;
 	width: auto;
-	height: 100%;
+	height: clamp(100px, 12vw, 150px);
 }
 
 .container {
@@ -48,7 +50,6 @@ img {
 
 .container .form {
 	flex: 1 1 600px;
-	min-height: 100vh;
 }
 
 .image-panel .logo {
@@ -67,7 +68,7 @@ img {
 .image-panel > .logo > h1 {
 	font-family: "Norse", sans-serif;
 	color: white;
-	font-size: 8rem;
+	font-size: clamp(5rem, 10vw, 7rem);
 }
 
 .image-panel .footer {
@@ -76,6 +77,7 @@ img {
 	display: flex;
 	text-align: center;
 	width: 100%;
+	padding: 0 1rem;
 }
 
 .image-panel .footer,
@@ -83,4 +85,124 @@ a {
 	display: inline-block;
 	color: white;
 	font-size: 0.8rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	background-color: #f2f2f2;
+	min-height: 100vh;
+}
+
+form > div {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+form .form-intro {
+	flex: 1;
+	font-size: 1.3rem;
+	font-weight: 600;
+	line-height: 1.5;
+	justify-content: flex-end;
+}
+
+.form-intro > p {
+	width: min(600px, 100%);
+	font-size: clamp(0.9rem, 2vh, 3rem);
+}
+
+.form-intro > p:nth-child(2) {
+	margin-bottom: 2rem;
+}
+
+form .form-panel {
+	background-color: white;
+	padding: 2rem;
+	box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+	font-size: clamp(0.8rem, 2vh, 3rem);
+}
+
+form .form-panel > p {
+	font-size: clamp(0.8rem, 2vh, 3rem);
+	font-weight: 600;
+	margin-bottom: 2rem;
+}
+
+form .form-panel .form-container {
+	width: min(700px, 100%);
+}
+
+.form-container div {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.form-container div p {
+	flex: 1 1 250px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+div p :is(label, input) {
+	width: 100%;
+	font: inherit;
+}
+
+div p > label {
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: gray;
+	margin-bottom: 0.3rem;
+}
+
+div p > input {
+	padding: 0.7rem;
+	border: 1px solid #e5e7eb;
+	border-radius: 0.5rem;
+}
+
+input:focus {
+	outline: 1px solid rgb(144, 144, 253);
+	box-shadow: 0px 2px 12px -3px rgba(0, 0, 0, 0.2);
+}
+
+input:user-valid {
+	border: 1px solid green;
+	background-color: #e7ffdb;
+}
+
+input:user-valid + span::before {
+	content: "✓";
+	font-size: 1rem;
+	position: absolute;
+	right: 10px;
+	top: 33px;
+	color: green;
+}
+
+input:user-invalid {
+	border: 1px solid red;
+}
+
+.form-option {
+	flex: 1;
+	font-size: clamp(0.8rem, 2vh, 3rem);
+}
+
+.form-option button {
+	font: inherit;
+	cursor: pointer;
+	width: 220px;
+	border: none;
+	border-radius: 0.3rem;
+	background-color: #596d48;
+	color: white;
+	padding: 1rem;
+	margin-bottom: 1rem;
 }
