@@ -1,10 +1,86 @@
+@font-face {
+	font-family: "Norse";
+	src:
+		url("/Fonts/Norse.woff2") format("woff2"),
+		url("/Fonts/Norse.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Norse";
+	src:
+		url("/Fonts/Norse-Bold.woff2") format("woff2"),
+		url("/Fonts/Norse-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 img {
 	display: block;
+	width: auto;
+	height: 100%;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container .image-panel {
+	flex: 1 1 300px;
+	background: url("/images/bg.jpg") center / cover no-repeat;
+	min-height: 100vh;
+	position: relative;
+}
+
+.container .form {
+	flex: 1 1 600px;
+	min-height: 100vh;
+}
+
+.image-panel .logo {
+	position: absolute;
+	height: 200px;
+	background-color: #00000066;
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	top: 20vh;
+	padding: 1rem 0;
+}
+
+.image-panel > .logo > h1 {
+	font-family: "Norse", sans-serif;
+	color: white;
+	font-size: 8rem;
+}
+
+.image-panel .footer {
+	position: absolute;
+	bottom: 1rem;
+	display: flex;
+	text-align: center;
+	width: 100%;
+}
+
+.image-panel .footer,
+a {
+	display: inline-block;
+	color: white;
+	font-size: 0.8rem;
 }
